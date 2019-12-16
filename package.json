@@ -1,18 +1,21 @@
 {
-  "name": "fullstackurl",
-  "version": "1.0.0",
-  "description": "URL Shortener Service",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "John Michael Squardo",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.8.1",
-    "nodemon": "^2.0.2",
-    "uniqid": "^5.2.0"
-  }
+	"name": "fullstackurl",
+	"version": "1.0.0",
+	"description": "URL Shortener Service",
+	"main": "server.js",
+	"scripts": {
+		"server": "nodemon server.js"
+	},
+	"author": "John Michael Squardo",
+	"license": "MIT",
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"express": "^4.17.1",
+		"mongoose": "^5.8.1",
+		"nodemon": "^2.0.2",
+		"uniqid": "^5.2.0"
+	},
+	"devDependencies": {
+		"eslint": "^6.7.2"
+	}
 }
