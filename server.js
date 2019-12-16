@@ -21,6 +21,22 @@ mongoose
 const shorten = require("./routes/api/shorten");
 app.use("/api/shorten", shorten);
 
+const redirect = require("./routes/api/redirect.js");
+app.use("/api/redirect", redirect);
+
+app.get("/:hash", (req, res) => {
+	const id = req.params.hash;
+	URL.findOne({ _id: id }, (err, doc) => {
+		if (doc) {
+			console.log(doc.url);
+			res.redirect("http://" + doc.url);
+		} else {
+			// Redirect to home page
+			res.redirect("/");
+		}
+	});
+});
+
 // Path to listen to
 app.get("/", (req, res) => {
 	res.send("Hello johnny");
