@@ -5,6 +5,15 @@ const uniqid = require("uniqid");
 // Load URL model
 const URL = require("../../models/urls.js");
 
+router.use((req, res, next) => {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header(
+		"Access-Control-Allow-Headers",
+		"Origin, X-Requested-With, Content-Type, Accept"
+	);
+	next();
+});
+
 // @route GET /api/shorten/test
 // @desc Test API endpoint
 router.get("/test", (req, res) => res.json({ msg: "API is working!" }));
