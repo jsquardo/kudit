@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+
+form {
+	max-width: 600px;
+	margin: auto;
+}
+
+fieldset {
+	position: relative;
+	border: none;
+	padding: none;
+	margin: none;
+}
+
+input[type="text"] {
+	color: #afb1be;
+	background-color: #32364a;
+	border-top: 2px solid rgb(57, 61, 82);
+	border-bottom: 2px solid rgb(57, 61, 82);
+	padding: 10px 65px;
+	border: none;
+}
+
+.outside {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #292c3b;
+}

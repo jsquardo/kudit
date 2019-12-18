@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import validator from "validator";
-import "./App.css";
+
+import "./Styles/App.css";
 
 class App extends Component {
 	state = {
@@ -44,7 +45,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
+			<div className="outside">
 				<form onSubmit={this.handleSubmit}>
 					<fieldset>
 						<input
