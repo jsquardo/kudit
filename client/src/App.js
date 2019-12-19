@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import validator from "validator";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import "./Styles/App.css";
 
@@ -47,18 +48,22 @@ class App extends Component {
 		return (
 			<div className="outside">
 				<form onSubmit={this.handleSubmit}>
-					<fieldset>
+					<div>
 						<input
 							type="text"
 							name="url"
 							placeholder="Enter URL including the http(s) protocol"
 							onChange={this.handleChange}
 						/>
-						<input type="submit" value="shorten" />
-					</fieldset>
-					<fieldset>
+						<input type="submit" value="Shorten" />
+					</div>
+					<div className={`${!this.state.link ? "hidden" : "result"}`}>
 						<span id="result">{this.state.link}</span>
-					</fieldset>
+
+						<CopyToClipboard text={this.state.link}>
+							<button className="">Copy</button>
+						</CopyToClipboard>
+					</div>
 				</form>
 			</div>
 		);

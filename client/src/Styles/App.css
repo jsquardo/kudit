@@ -5,22 +5,21 @@
 form {
 	max-width: 600px;
 	margin: auto;
+	width: 100%;
 }
 
-fieldset {
-	position: relative;
+form fieldset {
 	border: none;
-	padding: none;
-	margin: none;
 }
 
-input[type="text"] {
-	color: #afb1be;
-	background-color: #32364a;
-	border-top: 2px solid rgb(57, 61, 82);
-	border-bottom: 2px solid rgb(57, 61, 82);
-	padding: 10px 65px;
-	border: none;
+input[type='text'] {
+	width: 100%;
+	line-height: 1;
+	font-size: 18px;
+}
+
+input[type="text"]::placeholder {
+	color: #6ea0fd;
 }
 
 .outside {
@@ -29,5 +28,10 @@ input[type="text"] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #292c3b;
+	/* background-color: #292c3b; */
+	background-color: white;
+}
+
+.blue {
+	background-color: #4788ff;
 }
