@@ -19,17 +19,19 @@ router.use((req, res, next) => {
 router.get("/test", (req, res) => res.json({ msg: "API is working!" }));
 
 // @route POST /api/shorten
-// @desc POST a UTL to shorten
+// @desc POST a URL to shorten
 router.post("/", (req, res) => {
 	console.log(req.body);
 	if (req.body.url) {
 		urlData = req.body.url;
 	}
+
 	console.log("URL is: ", urlData);
 	// Check if the URL already exists
 	URL.findOne({ url: urlData }, (err, doc) => {
 		if (doc) {
 			console.log("Entry found in db.");
+			// Here
 		} else {
 			console.log("This is a new URL");
 			const webaddress = new URL({

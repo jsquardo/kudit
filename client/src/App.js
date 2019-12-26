@@ -48,20 +48,26 @@ class App extends Component {
 		return (
 			<div className="outside">
 				<form onSubmit={this.handleSubmit}>
-					<div>
-						<input
-							type="text"
-							name="url"
-							placeholder="Enter URL including the http(s) protocol"
-							onChange={this.handleChange}
-						/>
-						<input type="submit" value="Shorten" />
+					<div className="box">
+						<div className="container-1">
+							<input
+								type="text"
+								name="url"
+								placeholder="Enter URL including the http(s) protocol"
+								onChange={this.handleChange}
+								id="search"
+							/>
+							<span onClick={this.handleSubmit} className="icon">
+								<i className="fa fa-search" />
+							</span>
+						</div>
 					</div>
 					<div className={`${!this.state.link ? "hidden" : "result"}`}>
 						<span id="result">{this.state.link}</span>
-
 						<CopyToClipboard text={this.state.link}>
-							<button className="">Copy</button>
+							<button className="">
+								<i className="fa fa-copy" />
+							</button>
 						</CopyToClipboard>
 					</div>
 				</form>
